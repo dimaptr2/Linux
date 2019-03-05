@@ -1,3 +1,5 @@
+How we can do the PC Stick for TV Panel with Debian Linux and with the autostarting Chrome browser without desktop.
+
 First of all, we must install Debian Linux in the PC stick with LXDE desktop environment. Second, you must replace the configuration files.
 
 Put next files:
