@@ -1,0 +1,4 @@
+#@lxpanel --profile LXDE
+#@pcmanfm --desktop --profile LXDE
+#@xscreensaver -no-splash
+@google-chrome --kiosk http://srv-sapapp.eatmeat.ru:8987/deadline-shipments

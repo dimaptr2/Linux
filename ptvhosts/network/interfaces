@@ -1,0 +1,27 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# Velkom Wi-Fi
+#iface wlp1s0 inet dhcp
+#	wpa-ssid Corp_Velkom
+#	wpa-psk !(Velkom)*
+
+auto wlp1s0
+iface wlp1s0 inet dhcp
+	wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+#	wpa-ssid WiFi_Free
+#	wpa-psk 0987654321
+
+
+#iface wlp1s0 inet static
+#	address 10.200.214.111
+#	netmask 255.255.255.0
+#	gateway 10.200.214.1
+#	wpa-ssid Corp_Velkom
+#	wpa-psk !(Velkom)*

@@ -1,0 +1,17 @@
+First of all, we must install Debian Linux in the PC stick with LXDE desktop environment. Second, you must replace the configuration files.
+
+Put next files:
+1. 10-monitor.conf into /etc/X11/xorg.conf.d
+2. cleanstartchrome.sh into ~/bin
+3. lightdm.conf into /etc/lightdm
+4. autostart into ~/.config/lxsession/LXDE
+5. Install the program that can hide the mouse cursor:
+	sudo apt-get -y install unclutter
+	unclutter -idle 0.01 -root
+6. And set the settings from the file crontab.txt in the "crontab -e" command. Set the rule:
+@reboot bin/./cleanstartchrome.sh
+7. Copy wpa_supplicant.conf file into ptvadm@ptv2:/home/ptvadm and transfer it into /etc/wpa_supplicant and trasfer it after into /etc/wpa_supplicant/.
+8. Copy script into scanwiwi.py into /usr/local/bin as root user. Create crontab task that is executing the task /usr/local/bin/scanwifi.py 
+9. Copy the script ping.sh into directory /scripts and set the crontab rules: 
+* * * * * /scripts/ping.sh
+* * * * * (sleep 30;/scripts/ping.sh)
